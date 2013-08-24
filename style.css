@@ -1,0 +1,64 @@
+#page1 {
+    max-width: 500px;
+}
+input,
+select {
+    text-align: right;
+}
+input:invalid {
+    background: #f00;
+}
+input[readonly="readonly"] + label,
+input[readonly="readonly"] + label:hover,
+input[readonly="readonly"] + label:focus {
+    color: #aaa;
+    font-style: italic;
+}
+.preu-total {
+    font-weight: bold;
+}
+.ui-field-contain .ui-controlgroup-controls {
+    width: 100%;
+}
+.ui-grid-a {
+    margin: .5em 0;
+}
+.ui-grid-a.contains-select {
+    margin: 1em 0;
+}
+.ui-grid-a .ui-block-a,
+.ui-grid-a .ui-block-b:not("select") {
+    line-height: 33px !important;
+    white-space: nowrap;
+}
+.ui-grid-a.contains-select .ui-block-a {
+    line-height: 42px !important;
+}
+label.ui-input-text {
+    line-height: inherit;
+}
+#viatges-totals,
+#viatges-totals-setmana {
+    padding-right: 8px;
+}
+.ui-grid-a .ui-block-b {
+    text-align: right;
+}
+.imatge-bitllet {
+    margin-top: -20px;
+    opacity: .5;
+    text-align: center;
+    transition: all .4s;
+    transform: rotate(7deg);
+}
+.imatge-bitllet.visible {
+    margin-top: 0;
+    opacity: 1;
+    transform: rotate(5deg);
+}
+@media screen and (min-width: 470px) {
+    .imatge-bitllet {
+        float: right;
+        padding: 14px 0 0 20px;
+    }
+}
