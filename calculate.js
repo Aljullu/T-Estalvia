@@ -1,15 +1,23 @@
 /*
-    TODO separar calulate.js i layout.js
-    TODO separar css
-    TODO targeta rosa
-    TODO a vegades els bitllets no mostren l'animació
-    TODO bitllets Hola BCN
-    TODO els resultats haurien d'estar ordenats per preu
-    TODO T-12 no s'amaga si se seleccionen diverses zones o es deselecciona "menor de 14 anys"
-    DONE zones
+
+    TODOP1 nou disseny: input number més petits
+    TODOP1 nou disseny: resultats accessibles a través d'un botó
+    TODOP2 targeta rosa
+    TODOP2 bitllets Hola BCN
+    TODOP2 els resultats haurien d'estar ordenats per preu
+    TODOP2 mostrar data d'inici i final del període (a part del número de dies a comptar)
+    TODOP2 bug: el bitllet que s'obre automàticament no mostra l'animació
+    TODOP3 separar calulate.js i layout.js
+    DONEP1 zones
+    DONEP2 separar css
+    DONEP1 nou disseny: informació dels viatges fora d'un desplegable
+    DONEP1 bug: l'última línia de preus es mou per culpa de l'animació del bitllet
+    DONEP1 bug: T-12 no s'amaga si se seleccionen diverses zones o es deselecciona "menor de 14 anys"
+    DONEP2 bug: a vegades els bitllets no mostren l'animació
 */
 $(document).ready(function() {
     
+    // Selecciona tot el contingut dels inputs
     $("input[type='number']").click(function () {
         this.select()
     });
@@ -27,11 +35,17 @@ $(document).ready(function() {
 	    recalculateEverything();
 	});
     
+    // Animacions bitllets
     $(".bitllet").bind('expand', function () {
-        $(this).find(".imatge-bitllet").delay(0).queue(function() {
+        $(this).find(".imatge-bitllet").clearQueue().delay(0).queue(function() {
             $(this).addClass("visible")
         });
+    }).bind('collapse', function() {
+        $(this).find(".imatge-bitllet").removeClass("visible");
     });
+    
+    // Flag on guardarem la targeta més econòmica amb les preferències donades
+    var minTargeta = "bitllet-senzill";
     
 	function recalculateEverything() {
 	    var nen = $("#menor14anys").is(':checked');
@@ -245,7 +259,6 @@ $(document).ready(function() {
         if (nen) bitlletsAComprar["t12"] = Math.min(1,viatgesTotals);
         
 		var minPreuTotal = Number.MAX_VALUE;
-		var minTargeta = "bitllet-senzill";
 		
 		for (var targeta in preus) {
 		    var preuTotal = bitlletsAComprar[targeta] * preus[targeta];
@@ -271,95 +284,14 @@ $(document).ready(function() {
 		    $("#t12").show();
 	    }
 	    else {
-		    $("#12").hide();
+		    $("#t12").hide();
 	    }
-	    
+        
+        // Expandeix la targeta més barata
 		$("#"+minTargeta).trigger('expand');
-		
-		// Calculate prices
-		// bitllet senzill
-		/*var preuTotal = viatgesTotals * preuBitlletSenzill;
-		writePrice(".preu-bitllet-senzill-bitllet",preuBitlletSenzill);
-		writePrice(".preu-bitllet-senzill-total",preuTotal);
-		writePrice(".preu-bitllet-senzill-viatge",preuBitlletSenzill);
-		writePrice(".bitllet-senzill-comprar",viatgesTotals);
-		
-		// T-10
-		var bitlletsAComprar = Math.ceil(viatgesTotals/10);
-		var preuTotal = bitlletsAComprar * preuT10;
-		var preuViatge = preuTotal / viatgesTotals;
-		writePrice(".preu-t10-bitllet",preuT10);
-		writePrice(".preu-t10-total",preuTotal);
-		writePrice(".preu-t10-viatge",preuViatge);
-		writePrice(".t10-comprar",bitlletsAComprar);
-		// T-Dia
-		var bitlletsAComprar = diesEnQueAgafemElTransport;
-		var preuTotal = bitlletsAComprar * preuTDia;
-		var preuViatge = preuTotal / viatgesTotals;
-		writePrice(".preu-tdia-bitllet",preuTDia);
-		writePrice(".preu-tdia-total",preuTotal);
-		writePrice(".preu-tdia-viatge",preuViatge);
-		writePrice(".tdia-comprar",bitlletsAComprar);
-		// T-50/30
-		var bitlletsAComprar = T5030necessaries;
-		var preuTotal = bitlletsAComprar * preuT5030;
-		var preuViatge = preuTotal / viatgesTotals;
-		writePrice(".preu-t5030-bitllet",preuT5030);
-		writePrice(".preu-t5030-total",preuTotal);
-		writePrice(".preu-t5030-viatge",preuViatge);
-		writePrice(".t5030-comprar",bitlletsAComprar);
-		// T-70/30
-		var bitlletsAComprar = T7030necessaries;
-		var preuTotal = bitlletsAComprar * preuT7030;
-		var preuViatge = preuTotal / viatgesTotals;
-		writePrice(".preu-t7030-bitllet",preuT7030);
-		writePrice(".preu-t7030-total",preuTotal);
-		writePrice(".preu-t7030-viatge",preuViatge);
-		writePrice(".t7030-comprar",bitlletsAComprar);
-		// T-Mes
-		var bitlletsAComprar = mesosEnQueAgafemElTransport;
-		var preuTotal = bitlletsAComprar * preuTMes;
-		var preuViatge = preuTotal / viatgesTotals;
-		writePrice(".preu-tmes-bitllet",preuTMes);
-		writePrice(".preu-tmes-total",preuTotal);
-		writePrice(".preu-tmes-viatge",preuViatge);
-		writePrice(".tmes-comprar",bitlletsAComprar);
-		// T-Trimestre
-		var bitlletsAComprar = trimestresEnQueAgafemElTransport;
-		var preuTotal = bitlletsAComprar * preuTTrimestre;
-		var preuViatge = preuTotal / viatgesTotals;
-		writePrice(".preu-ttrimestre-bitllet",preuTTrimestre);
-		writePrice(".preu-ttrimestre-total",preuTotal);
-		writePrice(".preu-ttrimestre-viatge",preuViatge);
-		writePrice(".ttrimestre-comprar",bitlletsAComprar);
-		// T-Jove
-		if (jove || nen) {
-		    $("#tjove").show();
-		    var bitlletsAComprar = trimestresEnQueAgafemElTransport;
-		    var preuTotal = bitlletsAComprar * preuTJove;
-		    var preuViatge = preuTotal / viatgesTotals;
-		    writePrice(".preu-tjove-bitllet",preuTJove);
-		    writePrice(".preu-tjove-total",preuTotal);
-		    writePrice(".preu-tjove-viatge",preuViatge);
-		    writePrice(".tjove-comprar",bitlletsAComprar);
-	    }
-	    else {
-		    $("#tjove").hide();
-	    }
-		// T-12
-		if (nen) {
-		    $("#t12").show();
-		    var bitlletsAComprar = Math.min(1,viatgesTotals);
-		    var preuTotal = bitlletsAComprar * preuT12;
-		    var preuViatge = preuTotal / viatgesTotals;
-		    writePrice(".preu-t12-bitllet",preuT);
-		    writePrice(".preu-t12-total",preuTotal);
-		    writePrice(".preu-t12-viatge",preuViatge);
-		    writePrice(".t12-comprar",bitlletsAComprar);
-	    }
-	    else {
-		    $("#12").hide();
-	    }*/
+        
+        // Actualitza el collapsible perquè els borders quedin bé
+        $("#resultats-collapsible").collapsibleset('refresh');
 		
 		function writePrice (id, price) {
 			if (isNaN(price)) price = 0;

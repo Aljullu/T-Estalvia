@@ -1,12 +1,17 @@
+/* jQUery resets */
+.ui-input-search,
+div.ui-input-text {
+    margin: 0 !important;
+}
+
+/* styles */
+
 #page1 {
     max-width: 500px;
 }
 input,
 select {
     text-align: right;
-}
-input:invalid {
-    background: #f00;
 }
 input[readonly="readonly"] + label,
 input[readonly="readonly"] + label:hover,
@@ -26,9 +31,11 @@ input[readonly="readonly"] + label:focus {
 .ui-grid-a.contains-select {
     margin: 1em 0;
 }
-.ui-grid-a .ui-block-a,
-.ui-grid-a .ui-block-b:not("select") {
-    line-height: 33px !important;
+.ui-grid-a .ui-block-a > label,
+.ui-grid-a .ui-block-a > span/*,
+.ui-grid-a .ui-block-b:not("select")*/ {
+    display: block;
+    padding: .4em 0;
     white-space: nowrap;
 }
 .ui-grid-a.contains-select .ui-block-a {
@@ -45,15 +52,18 @@ label.ui-input-text {
     text-align: right;
 }
 .imatge-bitllet {
+    height: 148px;
     margin-top: -20px;
     opacity: .5;
     text-align: center;
     transition: all .4s;
+        -webkit-transform: rotate(7deg);
     transform: rotate(7deg);
 }
 .imatge-bitllet.visible {
     margin-top: 0;
     opacity: 1;
+        -webkit-transform: rotate(5deg);
     transform: rotate(5deg);
 }
 @media screen and (min-width: 470px) {
