@@ -1,20 +1,3 @@
-/*
-
-    TODOP1 nou disseny: input number més petits
-    TODOP1 nou disseny: resultats accessibles a través d'un botó
-    TODOP2 targeta rosa
-    TODOP2 bitllets Hola BCN
-    TODOP2 els resultats haurien d'estar ordenats per preu
-    TODOP2 mostrar data d'inici i final del període (a part del número de dies a comptar)
-    TODOP2 bug: el bitllet que s'obre automàticament no mostra l'animació
-    TODOP3 separar calulate.js i layout.js
-    DONEP1 zones
-    DONEP2 separar css
-    DONEP1 nou disseny: informació dels viatges fora d'un desplegable
-    DONEP1 bug: l'última línia de preus es mou per culpa de l'animació del bitllet
-    DONEP1 bug: T-12 no s'amaga si se seleccionen diverses zones o es deselecciona "menor de 14 anys"
-    DONEP2 bug: a vegades els bitllets no mostren l'animació
-*/
 $(document).ready(function() {
     
     // Selecciona tot el contingut dels inputs
@@ -43,9 +26,6 @@ $(document).ready(function() {
     }).bind('collapse', function() {
         $(this).find(".imatge-bitllet").removeClass("visible");
     });
-    
-    // Flag on guardarem la targeta més econòmica amb les preferències donades
-    var minTargeta = "bitllet-senzill";
     
 	function recalculateEverything() {
 	    var nen = $("#menor14anys").is(':checked');
@@ -258,6 +238,8 @@ $(document).ready(function() {
         if (jove || nen) bitlletsAComprar["tjove"] = trimestresEnQueAgafemElTransport;
         if (nen) bitlletsAComprar["t12"] = Math.min(1,viatgesTotals);
         
+        // Flag on guardarem la targeta més econòmica i el preu
+        var minTargeta = "bitllet-senzill";
 		var minPreuTotal = Number.MAX_VALUE;
 		
 		for (var targeta in preus) {

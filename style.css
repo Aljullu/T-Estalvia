@@ -1,12 +1,14 @@
 /* jQUery resets */
 .ui-input-search,
 div.ui-input-text {
-    margin: 0 !important;
+    margin: 0 .1em !important;
 }
 
 /* styles */
 
-#page1 {
+#form,
+#results {
+    margin: 0 auto;
     max-width: 500px;
 }
 input,
@@ -37,6 +39,10 @@ input[readonly="readonly"] + label:focus {
     display: block;
     padding: .4em 0;
     white-space: nowrap;
+}
+.ui-grid-a .ui-block-b.block-b-number {
+    float: right;
+    width: 20%;
 }
 .ui-grid-a.contains-select .ui-block-a {
     line-height: 42px !important;

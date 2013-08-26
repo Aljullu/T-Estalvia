@@ -10,8 +10,7 @@
     <title>T-Estalvia</title>
 </head>
 <body>
-	<h1>T-Estalvia</h1>
-    <div data-role="page" id="page1">
+    <div data-role="page" id="form">
         <div data-role="content">
             <fieldset data-role="controlgroup">
                 <h3>Zones</h3>
@@ -31,19 +30,19 @@
                     </div>
                 </div>
                 <h3>Període</h3>
-                <div class="ui-grid-a">
+                <!--<div class="ui-grid-a">
                     <div class="ui-block-a">
                         <input id="dia-inici" type="date" value="90" min="0" size="2"/>
                     </div>
                     <div class="ui-block-b">
                         <input id="dia-final" type="date" value="90" min="0" size="2"/>
                     </div>
-                </div>
+                </div>-->
                 <div class="ui-grid-a">
                     <div class="ui-block-a">
                         <label for="dies-a-calcular">Dies a calcular:</label>
                     </div>
-                    <div class="ui-block-b">
+                    <div class="ui-block-b block-b-number">
                         <input id="dies-a-calcular" type="number" value="90" min="0" size="2"/>
                     </div>
                 </div>
@@ -69,7 +68,7 @@
                     <div class="ui-block-a">
                         <label for="viatges-dilluns">Dilluns:</label>
                     </div>
-                    <div class="ui-block-b">
+                    <div class="ui-block-b block-b-number">
                         <input id="viatges-dilluns" type="number" value="0" min="0" size="2"/>
                     </div>
                 </div>
@@ -77,7 +76,7 @@
                     <div class="ui-block-a">
                         <label for="viatges-dimarts">Dimarts:</label>
                     </div>
-                    <div class="ui-block-b">
+                    <div class="ui-block-b block-b-number">
                         <input id="viatges-dimarts" type="number" value="0" min="0" size="2"/>
                     </div>
                 </div>
@@ -85,7 +84,7 @@
                     <div class="ui-block-a">
                         <label for="viatges-dimecres">Dimecres:</label>
                     </div>
-                    <div class="ui-block-b">
+                    <div class="ui-block-b block-b-number">
                         <input id="viatges-dimecres" type="number" value="0" min="0" size="2"/>
                     </div>
                 </div>
@@ -93,7 +92,7 @@
                     <div class="ui-block-a">
                         <label for="viatges-dijous">Dijous:</label>
                     </div>
-                    <div class="ui-block-b">
+                    <div class="ui-block-b block-b-number">
                         <input id="viatges-dijous" type="number" value="0" min="0" size="2"/>
                     </div>
                 </div>
@@ -101,7 +100,7 @@
                     <div class="ui-block-a">
                         <label for="viatges-divendres">Divendres:</label>
                     </div>
-                    <div class="ui-block-b">
+                    <div class="ui-block-b block-b-number">
                         <input id="viatges-divendres" type="number" value="0" min="0" size="2"/>
                     </div>
                 </div>
@@ -109,7 +108,7 @@
                     <div class="ui-block-a">
                         <label for="viatges-dissabte">Dissabte:</label>
                     </div>
-                    <div class="ui-block-b">
+                    <div class="ui-block-b block-b-number">
                         <input id="viatges-dissabte" type="number" value="0" min="0" size="2"/>
                     </div>
                 </div>
@@ -117,7 +116,7 @@
                     <div class="ui-block-a">
                         <label for="viatges-diumenge">Diumenge:</label>
                     </div>
-                    <div class="ui-block-b">
+                    <div class="ui-block-b block-b-number">
                         <input id="viatges-diumenge" type="number" value="0" min="0" size="2"/>
                     </div>
                 </div>
@@ -125,7 +124,7 @@
                     <div class="ui-block-a">
                         <span>Total (setmana):</span>
                     </div>
-                    <div class="ui-block-b">
+                    <div class="ui-block-b block-b-number">
                         <span id="viatges-totals-setmana">0</span>
                     </div>
                 </div>
@@ -133,7 +132,7 @@
                     <div class="ui-block-a">
                         <span>Total (període):</span>
                     </div>
-                    <div class="ui-block-b">
+                    <div class="ui-block-b block-b-number">
                         <span id="viatges-totals">0</span>
                     </div>
                 </div>
@@ -164,318 +163,322 @@
                         </fieldset>
                     </div>
                 </div>
-                <div id="resultats" data-role="collapsible" data-collapsed="true">
-                    <h3>
-                        Resultats
-                    </h3>
-                    <div data-role="fieldcontain">
-                    
-                        <div id="resultats-collapsible" data-role="collapsible-set">
-                            <div id="bitllet-senzill" class="bitllet" data-role="collapsible" data-collapsed="true">
-                                <h3>
-                                    Bitllets senzills (<strong class="preu-bitllet-senzill-total">0</strong> &euro;)
-                                </h3>
-                                <div>
-                                    <div class="imatge-bitllet">
-                                        <img src="./bitllets/senzill.jpg" alt="Imatge d'un bitllet senzill"/>
-                                    </div>
-		                            <div class="ui-grid-a">
-		                                <div class="ui-block-a">Bitllets a comprar:</div>
-		                                <div class="ui-block-b">
-                                            <span class="bitllet-senzill-comprar">0</span>
-                                        </div>
-                                    </div>
-		                            <div class="ui-grid-a">
-		                                <div class="ui-block-a">Preu bitllet:</div>
-		                                <div class="ui-block-b">
-                                            <span class="preu-bitllet-senzill-bitllet">0</span> &euro;
-                                        </div>
-                                    </div>
-		                            <div class="ui-grid-a">
-		                                <div class="ui-block-a">Preu total:</div>
-		                                <div class="ui-block-b">
-                                            <span class="preu-bitllet-senzill-total preu-total">0</span> &euro;
-                                        </div>
-                                    </div>
-		                            <div class="ui-grid-a">
-		                                <div class="ui-block-a">Preu viatge:</div>
-		                                <div class="ui-block-b">
-                                            <span class="preu-bitllet-senzill-viatge">0</span> &euro;
-                                        </div>
-		                            </div>
+            </div>
+            <a href="#results" data-role="button" data-icon="check" data-iconpos="right">Calcula la millor targeta</a>
+        </div>
+    </div>
+    <div data-role="page" id="results">
+        <div data-role="content">
+            <a href="#form" data-role="button" data-theme="a" data-icon="arrow-l">Modifica les dades</a>
+            <h3>
+                Resultats
+            </h3>
+            <div data-role="fieldcontain">
+            
+                <div id="resultats-collapsible" data-role="collapsible-set">
+                    <div id="bitllet-senzill" class="bitllet" data-role="collapsible" data-collapsed="true">
+                        <h3>
+                            Bitllets senzills (<strong class="preu-bitllet-senzill-total">0</strong> &euro;)
+                        </h3>
+                        <div>
+                            <div class="imatge-bitllet">
+                                <img src="./bitllets/senzill.jpg" alt="Imatge d'un bitllet senzill"/>
+                            </div>
+                            <div class="ui-grid-a">
+                                <div class="ui-block-a">Bitllets a comprar:</div>
+                                <div class="ui-block-b">
+                                    <span class="bitllet-senzill-comprar">0</span>
                                 </div>
                             </div>
-                            <div id="tdia" class="bitllet" data-role="collapsible" data-collapsed="true">
-                                <h3>
-                                    T-Dia (<strong class="preu-tdia-total">0</strong> &euro;)
-                                </h3>
-                                <div>
-                                    <div class="imatge-bitllet">
-                                        <img src="./bitllets/t-dia.png" alt="Imatge d'una T-Dia"/>
-                                    </div>
-		                            <div class="ui-grid-a">
-		                                <div class="ui-block-a">Bitllets a comprar:</div>
-		                                <div class="ui-block-b">
-                                            <span class="tdia-comprar">0</span>
-                                        </div>
-                                    </div>
-		                            <div class="ui-grid-a">
-		                                <div class="ui-block-a">Preu bitllet:</div>
-		                                <div class="ui-block-b">
-                                            <span class="preu-tdia-bitllet">0</span> &euro;
-                                        </div>
-                                    </div>
-		                            <div class="ui-grid-a">
-		                                <div class="ui-block-a">Preu total:</div>
-		                                <div class="ui-block-b">
-                                            <span class="preu-tdia-total preu-total">0</span> &euro;
-                                        </div>
-                                    </div>
-		                            <div class="ui-grid-a">
-		                                <div class="ui-block-a">Preu viatge:</div>
-		                                <div class="ui-block-b">
-                                            <span class="preu-tdia-viatge">0</span> &euro;
-                                        </div>
-		                            </div>
+                            <div class="ui-grid-a">
+                                <div class="ui-block-a">Preu bitllet:</div>
+                                <div class="ui-block-b">
+                                    <span class="preu-bitllet-senzill-bitllet">0</span> &euro;
                                 </div>
                             </div>
-                            <div id="t10" class="bitllet" data-role="collapsible" data-collapsed="true">
-                                <h3>
-                                    T-10 (<strong class="preu-t10-total">0</strong> &euro;)
-                                </h3>
-                                <div>
-                                    <div class="imatge-bitllet">
-                                        <img src="./bitllets/t-10.png" alt="Imatge d'una T-10"/>
-                                    </div>
-		                            <div class="ui-grid-a">
-		                                <div class="ui-block-a">Bitllets a comprar:</div>
-		                                <div class="ui-block-b">
-                                            <span class="t10-comprar">0</span>
-                                        </div>
-                                    </div>
-		                            <div class="ui-grid-a">
-		                                <div class="ui-block-a">Preu bitllet:</div>
-		                                <div class="ui-block-b">
-                                            <span class="preu-t10-bitllet">0</span> &euro;
-                                        </div>
-                                    </div>
-		                            <div class="ui-grid-a">
-		                                <div class="ui-block-a">Preu total:</div>
-		                                <div class="ui-block-b">
-                                            <span class="preu-t10-total preu-total">0</span> &euro;
-                                        </div>
-                                    </div>
-		                            <div class="ui-grid-a">
-		                                <div class="ui-block-a">Preu viatge:</div>
-		                                <div class="ui-block-b">
-                                            <span class="preu-t10-viatge">0</span> &euro;
-                                        </div>
-		                            </div>
+                            <div class="ui-grid-a">
+                                <div class="ui-block-a">Preu total:</div>
+                                <div class="ui-block-b">
+                                    <span class="preu-bitllet-senzill-total preu-total">0</span> &euro;
                                 </div>
                             </div>
-                            <div id="t5030" class="bitllet" data-role="collapsible" data-collapsed="true">
-                                <h3>
-                                    T-50/30 (<strong class="preu-t5030-total">0</strong> &euro;)
-                                </h3>
-                                <div>
-                                    <div class="imatge-bitllet">
-                                        <img src="./bitllets/t-50-30.png" alt="Imatge d'una T-50/30"/>
-                                    </div>
-		                            <div class="ui-grid-a">
-		                                <div class="ui-block-a">Bitllets a comprar:</div>
-		                                <div class="ui-block-b">
-                                            <span class="t5030-comprar">0</span>
-                                        </div>
-                                    </div>
-		                            <div class="ui-grid-a">
-		                                <div class="ui-block-a">Preu bitllet:</div>
-		                                <div class="ui-block-b">
-                                            <span class="preu-t5030-bitllet">0</span> &euro;
-                                        </div>
-                                    </div>
-		                            <div class="ui-grid-a">
-		                                <div class="ui-block-a">Preu total:</div>
-		                                <div class="ui-block-b">
-                                            <span class="preu-t5030-total preu-total">0</span> &euro;
-                                        </div>
-                                    </div>
-		                            <div class="ui-grid-a">
-		                                <div class="ui-block-a">Preu viatge:</div>
-		                                <div class="ui-block-b">
-                                            <span class="preu-t5030-viatge">0</span> &euro;
-                                        </div>
-		                            </div>
+                            <div class="ui-grid-a">
+                                <div class="ui-block-a">Preu viatge:</div>
+                                <div class="ui-block-b">
+                                    <span class="preu-bitllet-senzill-viatge">0</span> &euro;
                                 </div>
                             </div>
-                            <div id="t7030" class="bitllet" data-role="collapsible" data-collapsed="true">
-                                <h3>
-                                    T-70/30 (<strong class="preu-t7030-total">0</strong> &euro;)
-                                </h3>
-                                <div>
-                                    <div class="imatge-bitllet">
-                                        <img src="./bitllets/t-70-30.png" alt="Imatge d'una T-70/30"/>
-                                    </div>
-		                            <div class="ui-grid-a">
-		                                <div class="ui-block-a">Bitllets a comprar:</div>
-		                                <div class="ui-block-b">
-                                            <span class="t7030-comprar">0</span>
-                                        </div>
-                                    </div>
-		                            <div class="ui-grid-a">
-		                                <div class="ui-block-a">Preu bitllet:</div>
-		                                <div class="ui-block-b">
-                                            <span class="preu-t7030-bitllet">0</span> &euro;
-                                        </div>
-                                    </div>
-		                            <div class="ui-grid-a">
-		                                <div class="ui-block-a">Preu total:</div>
-		                                <div class="ui-block-b">
-                                            <span class="preu-t7030-total preu-total">0</span> &euro;
-                                        </div>
-                                    </div>
-		                            <div class="ui-grid-a">
-		                                <div class="ui-block-a">Preu viatge:</div>
-		                                <div class="ui-block-b">
-                                            <span class="preu-t7030-viatge">0</span> &euro;
-                                        </div>
-		                            </div>
+                        </div>
+                    </div>
+                    <div id="tdia" class="bitllet" data-role="collapsible" data-collapsed="true">
+                        <h3>
+                            T-Dia (<strong class="preu-tdia-total">0</strong> &euro;)
+                        </h3>
+                        <div>
+                            <div class="imatge-bitllet">
+                                <img src="./bitllets/t-dia.png" alt="Imatge d'una T-Dia"/>
+                            </div>
+                            <div class="ui-grid-a">
+                                <div class="ui-block-a">Bitllets a comprar:</div>
+                                <div class="ui-block-b">
+                                    <span class="tdia-comprar">0</span>
                                 </div>
                             </div>
-                            <div id="tmes" class="bitllet" data-role="collapsible" data-collapsed="true">
-                                <h3>
-                                    T-Mes (<strong class="preu-tmes-total">0</strong> &euro;)
-                                </h3>
-                                <div>
-                                    <div class="imatge-bitllet">
-                                        <img src="./bitllets/t-mes.png" alt="Imatge d'una T-Mes"/>
-                                    </div>
-		                            <div class="ui-grid-a">
-		                                <div class="ui-block-a">Bitllets a comprar:</div>
-		                                <div class="ui-block-b">
-                                            <span class="tmes-comprar">0</span>
-                                        </div>
-                                    </div>
-		                            <div class="ui-grid-a">
-		                                <div class="ui-block-a">Preu bitllet:</div>
-		                                <div class="ui-block-b">
-                                            <span class="preu-tmes-bitllet">0</span> &euro;
-                                        </div>
-                                    </div>
-		                            <div class="ui-grid-a">
-		                                <div class="ui-block-a">Preu total:</div>
-		                                <div class="ui-block-b">
-                                            <span class="preu-tmes-total preu-total">0</span> &euro;
-                                        </div>
-                                    </div>
-		                            <div class="ui-grid-a">
-		                                <div class="ui-block-a">Preu viatge:</div>
-		                                <div class="ui-block-b">
-                                            <span class="preu-tmes-viatge">0</span> &euro;
-                                        </div>
-		                            </div>
+                            <div class="ui-grid-a">
+                                <div class="ui-block-a">Preu bitllet:</div>
+                                <div class="ui-block-b">
+                                    <span class="preu-tdia-bitllet">0</span> &euro;
                                 </div>
                             </div>
-                            <div id="ttrimestre" class="bitllet" data-role="collapsible" data-collapsed="true">
-                                <h3>
-                                    T-Trimestre (<strong class="preu-ttrimestre-total">0</strong> &euro;)
-                                </h3>
-                                <div>
-                                    <div class="imatge-bitllet">
-                                        <img src="./bitllets/t-trimestre.png" alt="Imatge d'una T-Trimestre"/>
-                                    </div>
-		                            <div class="ui-grid-a">
-		                                <div class="ui-block-a">Bitllets a comprar:</div>
-		                                <div class="ui-block-b">
-                                            <span class="ttrimestre-comprar">0</span>
-                                        </div>
-                                    </div>
-		                            <div class="ui-grid-a">
-		                                <div class="ui-block-a">Preu bitllet:</div>
-		                                <div class="ui-block-b">
-                                            <span class="preu-ttrimestre-bitllet">0</span> &euro;
-                                        </div>
-                                    </div>
-		                            <div class="ui-grid-a">
-		                                <div class="ui-block-a">Preu total:</div>
-		                                <div class="ui-block-b">
-                                            <span class="preu-ttrimestre-total preu-total">0</span> &euro;
-                                        </div>
-                                    </div>
-		                            <div class="ui-grid-a">
-		                                <div class="ui-block-a">Preu viatge:</div>
-		                                <div class="ui-block-b">
-                                            <span class="preu-ttrimestre-viatge">0</span> &euro;
-                                        </div>
-		                            </div>
-                                    <p id="explicacioaturat" style="display:none;">Per obtenir el descompte per a aturats, consulteu la <a href="http://www.tmb.cat/ca/preguntes-frequents/-/categoria/PREGUNTAS-CAT2" target="_blank">pàgina de TMB</a>.</p>
+                            <div class="ui-grid-a">
+                                <div class="ui-block-a">Preu total:</div>
+                                <div class="ui-block-b">
+                                    <span class="preu-tdia-total preu-total">0</span> &euro;
                                 </div>
                             </div>
-                            <div id="tjove" class="bitllet" style="display: none;" data-role="collapsible" data-collapsed="true">
-                                <h3>
-                                    T-Jove (<strong class="preu-tjove-total">0</strong> &euro;)
-                                </h3>
-                                <div>
-                                    <div class="imatge-bitllet">
-                                        <img src="./bitllets/t-jove.png" alt="Imatge d'una T-Jove"/>
-                                    </div>
-		                            <div class="ui-grid-a">
-		                                <div class="ui-block-a">Bitllets a comprar:</div>
-		                                <div class="ui-block-b">
-                                            <span class="tjove-comprar">0</span>
-                                        </div>
-                                    </div>
-		                            <div class="ui-grid-a">
-		                                <div class="ui-block-a">Preu bitllet:</div>
-		                                <div class="ui-block-b">
-                                            <span class="preu-tjove-bitllet">0</span> &euro;
-                                        </div>
-                                    </div>
-		                            <div class="ui-grid-a">
-		                                <div class="ui-block-a">Preu total:</div>
-		                                <div class="ui-block-b">
-                                            <span class="preu-tjove-total preu-total">0</span> &euro;
-                                        </div>
-                                    </div>
-		                            <div class="ui-grid-a">
-		                                <div class="ui-block-a">Preu viatge:</div>
-		                                <div class="ui-block-b">
-                                            <span class="preu-tjove-viatge">0</span> &euro;
-                                        </div>
-		                            </div>
+                            <div class="ui-grid-a">
+                                <div class="ui-block-a">Preu viatge:</div>
+                                <div class="ui-block-b">
+                                    <span class="preu-tdia-viatge">0</span> &euro;
                                 </div>
                             </div>
-                            <div id="t12" class="bitllet" style="display: none;" data-role="collapsible" data-collapsed="true">
-                                <h3>
-                                    T-12 (<strong class="preu-t12-total">0</strong> &euro;)
-                                </h3>
-                                <div>
-                                    <div class="imatge-bitllet">
-                                        <img src="./bitllets/t-12.png" alt="Imatge d'una T-12"/>
-                                    </div>
-		                            <div class="ui-grid-a">
-		                                <div class="ui-block-a">Bitllets a comprar:</div>
-		                                <div class="ui-block-b">
-                                            <span class="t12-comprar">0</span>
-                                        </div>
-                                    </div>
-		                            <div class="ui-grid-a">
-		                                <div class="ui-block-a">Preu bitllet:</div>
-		                                <div class="ui-block-b">
-                                            <span class="preu-t12-bitllet">0</span> &euro;
-                                        </div>
-                                    </div>
-		                            <div class="ui-grid-a">
-		                                <div class="ui-block-a">Preu total:</div>
-		                                <div class="ui-block-b">
-                                            <span class="preu-t12-total preu-total">0</span> &euro;
-                                        </div>
-                                    </div>
-		                            <div class="ui-grid-a">
-		                                <div class="ui-block-a">Preu viatge:</div>
-		                                <div class="ui-block-b">
-                                            <span class="preu-t12-viatge">0</span> &euro;
-                                        </div>
-		                            </div>
+                        </div>
+                    </div>
+                    <div id="t10" class="bitllet" data-role="collapsible" data-collapsed="true">
+                        <h3>
+                            T-10 (<strong class="preu-t10-total">0</strong> &euro;)
+                        </h3>
+                        <div>
+                            <div class="imatge-bitllet">
+                                <img src="./bitllets/t-10.png" alt="Imatge d'una T-10"/>
+                            </div>
+                            <div class="ui-grid-a">
+                                <div class="ui-block-a">Bitllets a comprar:</div>
+                                <div class="ui-block-b">
+                                    <span class="t10-comprar">0</span>
+                                </div>
+                            </div>
+                            <div class="ui-grid-a">
+                                <div class="ui-block-a">Preu bitllet:</div>
+                                <div class="ui-block-b">
+                                    <span class="preu-t10-bitllet">0</span> &euro;
+                                </div>
+                            </div>
+                            <div class="ui-grid-a">
+                                <div class="ui-block-a">Preu total:</div>
+                                <div class="ui-block-b">
+                                    <span class="preu-t10-total preu-total">0</span> &euro;
+                                </div>
+                            </div>
+                            <div class="ui-grid-a">
+                                <div class="ui-block-a">Preu viatge:</div>
+                                <div class="ui-block-b">
+                                    <span class="preu-t10-viatge">0</span> &euro;
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="t5030" class="bitllet" data-role="collapsible" data-collapsed="true">
+                        <h3>
+                            T-50/30 (<strong class="preu-t5030-total">0</strong> &euro;)
+                        </h3>
+                        <div>
+                            <div class="imatge-bitllet">
+                                <img src="./bitllets/t-50-30.png" alt="Imatge d'una T-50/30"/>
+                            </div>
+                            <div class="ui-grid-a">
+                                <div class="ui-block-a">Bitllets a comprar:</div>
+                                <div class="ui-block-b">
+                                    <span class="t5030-comprar">0</span>
+                                </div>
+                            </div>
+                            <div class="ui-grid-a">
+                                <div class="ui-block-a">Preu bitllet:</div>
+                                <div class="ui-block-b">
+                                    <span class="preu-t5030-bitllet">0</span> &euro;
+                                </div>
+                            </div>
+                            <div class="ui-grid-a">
+                                <div class="ui-block-a">Preu total:</div>
+                                <div class="ui-block-b">
+                                    <span class="preu-t5030-total preu-total">0</span> &euro;
+                                </div>
+                            </div>
+                            <div class="ui-grid-a">
+                                <div class="ui-block-a">Preu viatge:</div>
+                                <div class="ui-block-b">
+                                    <span class="preu-t5030-viatge">0</span> &euro;
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="t7030" class="bitllet" data-role="collapsible" data-collapsed="true">
+                        <h3>
+                            T-70/30 (<strong class="preu-t7030-total">0</strong> &euro;)
+                        </h3>
+                        <div>
+                            <div class="imatge-bitllet">
+                                <img src="./bitllets/t-70-30.png" alt="Imatge d'una T-70/30"/>
+                            </div>
+                            <div class="ui-grid-a">
+                                <div class="ui-block-a">Bitllets a comprar:</div>
+                                <div class="ui-block-b">
+                                    <span class="t7030-comprar">0</span>
+                                </div>
+                            </div>
+                            <div class="ui-grid-a">
+                                <div class="ui-block-a">Preu bitllet:</div>
+                                <div class="ui-block-b">
+                                    <span class="preu-t7030-bitllet">0</span> &euro;
+                                </div>
+                            </div>
+                            <div class="ui-grid-a">
+                                <div class="ui-block-a">Preu total:</div>
+                                <div class="ui-block-b">
+                                    <span class="preu-t7030-total preu-total">0</span> &euro;
+                                </div>
+                            </div>
+                            <div class="ui-grid-a">
+                                <div class="ui-block-a">Preu viatge:</div>
+                                <div class="ui-block-b">
+                                    <span class="preu-t7030-viatge">0</span> &euro;
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tmes" class="bitllet" data-role="collapsible" data-collapsed="true">
+                        <h3>
+                            T-Mes (<strong class="preu-tmes-total">0</strong> &euro;)
+                        </h3>
+                        <div>
+                            <div class="imatge-bitllet">
+                                <img src="./bitllets/t-mes.png" alt="Imatge d'una T-Mes"/>
+                            </div>
+                            <div class="ui-grid-a">
+                                <div class="ui-block-a">Bitllets a comprar:</div>
+                                <div class="ui-block-b">
+                                    <span class="tmes-comprar">0</span>
+                                </div>
+                            </div>
+                            <div class="ui-grid-a">
+                                <div class="ui-block-a">Preu bitllet:</div>
+                                <div class="ui-block-b">
+                                    <span class="preu-tmes-bitllet">0</span> &euro;
+                                </div>
+                            </div>
+                            <div class="ui-grid-a">
+                                <div class="ui-block-a">Preu total:</div>
+                                <div class="ui-block-b">
+                                    <span class="preu-tmes-total preu-total">0</span> &euro;
+                                </div>
+                            </div>
+                            <div class="ui-grid-a">
+                                <div class="ui-block-a">Preu viatge:</div>
+                                <div class="ui-block-b">
+                                    <span class="preu-tmes-viatge">0</span> &euro;
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="ttrimestre" class="bitllet" data-role="collapsible" data-collapsed="true">
+                        <h3>
+                            T-Trimestre (<strong class="preu-ttrimestre-total">0</strong> &euro;)
+                        </h3>
+                        <div>
+                            <div class="imatge-bitllet">
+                                <img src="./bitllets/t-trimestre.png" alt="Imatge d'una T-Trimestre"/>
+                            </div>
+                            <div class="ui-grid-a">
+                                <div class="ui-block-a">Bitllets a comprar:</div>
+                                <div class="ui-block-b">
+                                    <span class="ttrimestre-comprar">0</span>
+                                </div>
+                            </div>
+                            <div class="ui-grid-a">
+                                <div class="ui-block-a">Preu bitllet:</div>
+                                <div class="ui-block-b">
+                                    <span class="preu-ttrimestre-bitllet">0</span> &euro;
+                                </div>
+                            </div>
+                            <div class="ui-grid-a">
+                                <div class="ui-block-a">Preu total:</div>
+                                <div class="ui-block-b">
+                                    <span class="preu-ttrimestre-total preu-total">0</span> &euro;
+                                </div>
+                            </div>
+                            <div class="ui-grid-a">
+                                <div class="ui-block-a">Preu viatge:</div>
+                                <div class="ui-block-b">
+                                    <span class="preu-ttrimestre-viatge">0</span> &euro;
+                                </div>
+                            </div>
+                            <p id="explicacioaturat" style="display:none;">Per obtenir el descompte per a aturats, consulteu la <a href="http://www.tmb.cat/ca/preguntes-frequents/-/categoria/PREGUNTAS-CAT2" target="_blank">pàgina de TMB</a>.</p>
+                        </div>
+                    </div>
+                    <div id="tjove" class="bitllet" style="display: none;" data-role="collapsible" data-collapsed="true">
+                        <h3>
+                            T-Jove (<strong class="preu-tjove-total">0</strong> &euro;)
+                        </h3>
+                        <div>
+                            <div class="imatge-bitllet">
+                                <img src="./bitllets/t-jove.png" alt="Imatge d'una T-Jove"/>
+                            </div>
+                            <div class="ui-grid-a">
+                                <div class="ui-block-a">Bitllets a comprar:</div>
+                                <div class="ui-block-b">
+                                    <span class="tjove-comprar">0</span>
+                                </div>
+                            </div>
+                            <div class="ui-grid-a">
+                                <div class="ui-block-a">Preu bitllet:</div>
+                                <div class="ui-block-b">
+                                    <span class="preu-tjove-bitllet">0</span> &euro;
+                                </div>
+                            </div>
+                            <div class="ui-grid-a">
+                                <div class="ui-block-a">Preu total:</div>
+                                <div class="ui-block-b">
+                                    <span class="preu-tjove-total preu-total">0</span> &euro;
+                                </div>
+                            </div>
+                            <div class="ui-grid-a">
+                                <div class="ui-block-a">Preu viatge:</div>
+                                <div class="ui-block-b">
+                                    <span class="preu-tjove-viatge">0</span> &euro;
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="t12" class="bitllet" style="display: none;" data-role="collapsible" data-collapsed="true">
+                        <h3>
+                            T-12 (<strong class="preu-t12-total">0</strong> &euro;)
+                        </h3>
+                        <div>
+                            <div class="imatge-bitllet">
+                                <img src="./bitllets/t-12.png" alt="Imatge d'una T-12"/>
+                            </div>
+                            <div class="ui-grid-a">
+                                <div class="ui-block-a">Bitllets a comprar:</div>
+                                <div class="ui-block-b">
+                                    <span class="t12-comprar">0</span>
+                                </div>
+                            </div>
+                            <div class="ui-grid-a">
+                                <div class="ui-block-a">Preu bitllet:</div>
+                                <div class="ui-block-b">
+                                    <span class="preu-t12-bitllet">0</span> &euro;
+                                </div>
+                            </div>
+                            <div class="ui-grid-a">
+                                <div class="ui-block-a">Preu total:</div>
+                                <div class="ui-block-b">
+                                    <span class="preu-t12-total preu-total">0</span> &euro;
+                                </div>
+                            </div>
+                            <div class="ui-grid-a">
+                                <div class="ui-block-a">Preu viatge:</div>
+                                <div class="ui-block-b">
+                                    <span class="preu-t12-viatge">0</span> &euro;
                                 </div>
                             </div>
                         </div>
