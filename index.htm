@@ -120,22 +120,6 @@
                         <input id="viatges-diumenge" type="number" value="0" min="0" size="2"/>
                     </div>
                 </div>
-                <div class="ui-grid-a">
-                    <div class="ui-block-a">
-                        <span>Total (setmana):</span>
-                    </div>
-                    <div class="ui-block-b block-b-number">
-                        <span id="viatges-totals-setmana">0</span>
-                    </div>
-                </div>
-                <div class="ui-grid-a">
-                    <div class="ui-block-a">
-                        <span>Total (període):</span>
-                    </div>
-                    <div class="ui-block-b block-b-number">
-                        <span id="viatges-totals">0</span>
-                    </div>
-                </div>
             </fieldset>
             <div data-role="collapsible-set">
                 <div data-role="collapsible" data-collapsed="true">
@@ -174,7 +158,6 @@
                 Resultats
             </h3>
             <div data-role="fieldcontain">
-            
                 <div id="resultats-collapsible" data-role="collapsible-set">
                     <div id="bitllet-senzill" class="bitllet" data-role="collapsible" data-collapsed="true">
                         <h3>
@@ -484,6 +467,11 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <h3>Estadístiques</h3>
+            <div class="ui-grid-a">
+                <p><strong id="viatges-totals-setmana">0</strong> viatges/setmana</p>
+                <p><strong id="viatges-totals">0</strong> viatges/període</p>
             </div>
         </div>
     </div>
