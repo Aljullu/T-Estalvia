@@ -46,9 +46,16 @@ input[readonly="readonly"] + label:focus {
 }
 #results .ui-grid-a .ui-block-a {
     width: 74%;
+        width: -moz-max-content;
+        width: -webkit-max-content;
+    width: max-content;
 }
 #results .ui-grid-a .ui-block-b {
+    float: right;
     width: 20%;
+        width: -moz-max-content;
+        width: -webkit-max-content;
+    width: max-content;
 }
 .ui-grid-a.contains-select .ui-block-a {
     line-height: 42px !important;
