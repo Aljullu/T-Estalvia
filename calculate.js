@@ -4,15 +4,6 @@ $(document).ready(function() {
     $("input[type='number']").click(function () {
         this.select()
     });
-
-	var d = new Date();
-	var indexPrimerDiaSetmana = d.getDay();
-	
-	$("#setmana-comenca").val(indexPrimerDiaSetmana).selectmenu('refresh');;
-	
-	$("#setmana-comenca").change(function () {
-		indexPrimerDiaSetmana = parseInt($(this).val());
-	});
 	
     var nen = false;
     var jove = false;
@@ -32,6 +23,37 @@ $(document).ready(function() {
     }).bind('collapse', function() {
         $(this).find(".imatge-bitllet").removeClass("visible");
     });
+    
+    // Dates
+    setDates();
+    var diesACalcular;
+    $("#dies-a-calcular").change(function() {
+        setDates();
+    });
+
+	var indexPrimerDiaSetmana = 0;
+	
+    function setDates() {
+        
+        diesACalcular = parseInt($("#dies-a-calcular").val());
+        
+        var today = new Date();
+        var d = today.getDay();
+        var dd = today.getDate();
+        var mm = today.getMonth()+1; //January is 0!
+        var yyyy = today.getFullYear();
+        indexPrimerDiaSetmana = today.getDay();
+        var diesDeLaSetmana = ["dg.", "dl.", "dt.", "dc.", "dj.", "dv.", "ds."];
+        $("#start-date").html(diesDeLaSetmana[d] + " " + dd+'/'+mm+'/'+yyyy);
+        
+        var lastDay = new Date(today);
+        lastDay.setDate(lastDay.getDate() + diesACalcular);
+        var d = lastDay.getDay();
+        var dd = lastDay.getDate();
+        var mm = lastDay.getMonth()+1; //January is 0!
+        var yyyy = lastDay.getFullYear();
+        $("#end-date").html(diesDeLaSetmana[d] + " " + dd+'/'+mm+'/'+yyyy);
+    }
         
     // Flag on guardarem la targeta més econòmica i el preu
     var minTargeta = "bitllet-senzill";
@@ -48,7 +70,6 @@ $(document).ready(function() {
         function recalculateEverything() {
             var viatgesSetmana = 0;
             var viatgesTotals = 0;
-            var diesACalcular = parseInt($("#dies-a-calcular").val());
             
             var diesDeLaSetmana = ["diumenge", "dilluns", "dimarts", "dimecres", "dijous", "divendres", "dissabte"];
             

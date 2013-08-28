@@ -5,7 +5,12 @@ div.ui-input-text {
 }
 
 /* styles */
-
+h3 {
+    margin-top: 2em;
+}
+h3:first-child {
+    margin-top: 0;
+}
 #form,
 #results {
     margin: 0 auto;
@@ -21,6 +26,14 @@ input[readonly="readonly"] + label:focus {
     color: #aaa;
     font-style: italic;
 }
+small {
+    color: #aaa;
+    font-size: 1em;
+}
+small strong {
+    color: #555;
+    font-weight: normal;
+}
 .preu-total {
     font-weight: bold;
 }
@@ -29,9 +42,6 @@ input[readonly="readonly"] + label:focus {
 }
 .ui-grid-a {
     margin: .5em 0;
-}
-.ui-grid-a.contains-select {
-    margin: 1em 0;
 }
 .ui-grid-a .ui-block-a > label,
 .ui-grid-a .ui-block-a > span/*,
@@ -71,23 +81,23 @@ label.ui-input-text {
     text-align: right;
 }
 .imatge-bitllet {
-    height: 148px;
-    margin-top: -20px;
-    opacity: .5;
     text-align: center;
-    transition: all .4s;
-        -webkit-transform: rotate(7deg);
-    transform: rotate(7deg);
-}
-.imatge-bitllet.visible {
-    margin-top: 0;
-    opacity: 1;
-        -webkit-transform: rotate(5deg);
-    transform: rotate(5deg);
 }
 @media screen and (min-width: 470px) {
     .imatge-bitllet {
         float: right;
-        padding: 14px 0 0 20px;
+        height: 148px;
+        margin-top: -20px;
+        opacity: .5;
+        padding: 0 0 0 20px;
+        transition: all .4s;
+            -webkit-transform: rotate(7deg);
+        transform: rotate(7deg);
+    }
+    .imatge-bitllet.visible {
+        margin-top: 0;
+        opacity: 1;
+            -webkit-transform: rotate(5deg);
+        transform: rotate(5deg);
     }
 }

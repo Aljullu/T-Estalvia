@@ -24,3 +24,5 @@ TODO
 * DONEP1 bug: no es calculen els bitllets des que el contingut està en dues pàgines
 * DONEP3 bug: que als resultats els números ocupin menys amplada que les lletres per evitar salts de línia
 * DONEP3 bug: el bitllet que s'obre automàticament no mostra l'animació
+* DONEP3 icones als títols
+* DONEP3 títol

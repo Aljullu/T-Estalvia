@@ -2,6 +2,7 @@
 <head>
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
     <link rel="stylesheet" href="./style.css" />
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
     <script src="./calculate.js"></script>
@@ -11,9 +12,12 @@
 </head>
 <body>
     <div data-role="page" id="form">
+	    <div data-role="header">
+		    <h1>T-Estalvia</h1>
+	    </div>
         <div data-role="content">
             <fieldset data-role="controlgroup">
-                <h3>Zones</h3>
+                <h3><i class="icon-qrcode"></i> Zones</h3>
                 <div class="ui-grid-a contains-select">
                     <div class="ui-block-a">
                         Zones:
@@ -29,7 +33,7 @@
                         </select>
                     </div>
                 </div>
-                <h3>Període</h3>
+                <h3><i class="icon-calendar"></i> Període</h3>
                 <!--<div class="ui-grid-a">
                     <div class="ui-block-a">
                         <input id="dia-inici" type="date" value="90" min="0" size="2"/>
@@ -46,23 +50,8 @@
                         <input id="dies-a-calcular" type="number" value="90" min="0" size="2"/>
                     </div>
                 </div>
-                <div class="ui-grid-a contains-select">
-                    <div class="ui-block-a">
-                        Començant per:
-                    </div>
-                    <div class="ui-block-b">
-                        <select id="setmana-comenca">
-                            <option value="1">Dilluns</option>
-                            <option value="2">Dimarts</option>
-                            <option value="3">Dimecres</option>
-                            <option value="4">Dijous</option>
-                            <option value="5">Divendres</option>
-                            <option value="6">Dissabte</option>
-                            <option value="0">Diumenge</option>
-                        </select>
-                    </div>
-                </div>
-                <h3>Viatges</h3>
+                <small><p>Es calcularà del <strong id="start-date"></strong> (avui) fins el <strong id="end-date"></strong>.</small>
+                <h3><i class="icon-exchange"></i> Viatges</h3>
                 <p>Indica quants viatges fas cada dia:</p>
                 <div class="ui-grid-a">
                     <div class="ui-block-a">
@@ -152,11 +141,12 @@
         </div>
     </div>
     <div data-role="page" id="results">
+	    <div data-role="header">
+		    <h1>T-Estalvia</h1>
+	    </div>
         <div data-role="content">
             <a href="#form" data-role="button" data-theme="a" data-icon="arrow-l">Modifica les dades</a>
-            <h3>
-                Resultats
-            </h3>
+            <h3><i class="icon-star-empty"></i> Resultats</h3>
             <div data-role="fieldcontain">
                 <div id="resultats-collapsible" data-role="collapsible-set">
                     <div id="bitllet-senzill" class="bitllet" data-role="collapsible" data-collapsed="true">
@@ -468,11 +458,9 @@
                     </div>
                 </div>
             </div>
-            <h3>Estadístiques</h3>
-            <div class="ui-grid-a">
-                <p><strong id="viatges-totals-setmana">0</strong> viatges/setmana</p>
-                <p><strong id="viatges-totals">0</strong> viatges/període</p>
-            </div>
+            <h3><i class="icon-bar-chart"></i> Estadístiques</h3>
+            <p><strong id="viatges-totals-setmana">0</strong> viatges/setmana</p>
+            <p><strong id="viatges-totals">0</strong> viatges/període</p>
         </div>
     </div>
 </body>
