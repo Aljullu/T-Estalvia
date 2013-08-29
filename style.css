@@ -5,6 +5,29 @@ div.ui-input-text {
 }
 
 /* styles */
+#form,
+#results {
+    background: url("./img/noise.png"), #ddd !important;
+}
+.ui-grid-a {
+    //background: #eee;
+}
+h1 {
+    background: url("./img/t-estalvia.png") no-repeat 10px 0;
+    line-height: 106px;
+    height: 106px;
+    padding-left: 200px
+}
+@media screen and (max-width: 400px) {
+    h1 {
+        background-position: center 10px;
+        height: auto;
+        line-height: 1em;
+        padding-left: 0;
+        padding-top: 136px;
+        text-align: center;
+    }
+}
 h3 {
     margin-top: 2em;
 }

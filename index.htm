@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="ca">
 <head>
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
@@ -8,14 +9,14 @@
     <script src="./calculate.js"></script>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
     <title>T-Estalvia</title>
 </head>
 <body>
     <div data-role="page" id="form">
-	    <div data-role="header">
-		    <h1>T-Estalvia</h1>
-	    </div>
         <div data-role="content">
+            <h1>T-Estalvia</h1>
+            <p>T-Estalvia us ajuda a calcular quina és la targeta de TMB que s'adequa més als vostres hàbits.</p>
             <fieldset data-role="controlgroup">
                 <h3><i class="icon-qrcode"></i> Zones</h3>
                 <div class="ui-grid-a contains-select">
@@ -34,6 +35,7 @@
                     </div>
                 </div>
                 <h3><i class="icon-calendar"></i> Període</h3>
+                <p>Indiqueu en quin període s'han de fer els càlculs. Períodes de menys de 90 dies penalitzen les targetes de més durada com la T-Trimestre, la T-Jove o la T-Mes.</p>
                 <!--<div class="ui-grid-a">
                     <div class="ui-block-a">
                         <input id="dia-inici" type="date" value="90" min="0" size="2"/>
@@ -52,7 +54,7 @@
                 </div>
                 <small><p>Es calcularà del <strong id="start-date"></strong> (avui) fins el <strong id="end-date"></strong>.</small>
                 <h3><i class="icon-exchange"></i> Viatges</h3>
-                <p>Indica quants viatges fas cada dia:</p>
+                <p>Indiqueu quants viatges acostumeu a fer cada dia de la setmana:</p>
                 <div class="ui-grid-a">
                     <div class="ui-block-a">
                         <label for="viatges-dilluns">Dilluns:</label>
@@ -141,9 +143,6 @@
         </div>
     </div>
     <div data-role="page" id="results">
-	    <div data-role="header">
-		    <h1>T-Estalvia</h1>
-	    </div>
         <div data-role="content">
             <a href="#form" data-transition="slide" data-direction="reverse" data-role="button" data-theme="a" data-icon="arrow-l">Modifica les dades</a>
             <h3><i class="icon-star-empty"></i> Resultats</h3>
@@ -385,7 +384,7 @@
                                     <span class="preu-ttrimestre-viatge">0</span> &euro;
                                 </div>
                             </div>
-                            <p id="explicacioaturat" style="display:none;">Per obtenir el descompte per a aturats, consulteu la <a href="http://www.tmb.cat/ca/preguntes-frequents/-/categoria/PREGUNTAS-CAT2" target="_blank">pàgina de TMB</a>.</p>
+                            <small id="explicacioaturat" style="display:none;">Per obtenir el descompte per a aturats, consulteu la <a href="http://www.tmb.cat/ca/preguntes-frequents/-/categoria/PREGUNTAS-CAT2" target="_blank">pàgina de TMB</a>.</small>
                         </div>
                     </div>
                     <div id="tjove" class="bitllet" style="display: none;" data-role="collapsible" data-collapsed="true" data-content-theme="d">
