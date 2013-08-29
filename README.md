@@ -7,10 +7,10 @@ Calculadora de preus els bitllets de TMB
 TODO
 ==========
 * TODOP2 diàlegs d'informació
+* TODOP2 s'hauria de poder seleccionar la data d'inici i final
 * TODOP2 targeta rosa
 * TODOP2 bitllets Hola BCN
 * TODOP2 els resultats haurien d'estar ordenats per preu
-* TODOP2 mostrar data d'inici i final del període (a part del número de dies a comptar)
 * TODOP3 separar calulate.js i layout.js
 * TODOP3 bug: el select de Zones hi ha un píxel que no es veu
 * DONEP1 zones
@@ -25,4 +25,7 @@ TODO
 * DONEP3 bug: que als resultats els números ocupin menys amplada que les lletres per evitar salts de línia
 * DONEP3 bug: el bitllet que s'obre automàticament no mostra l'animació
 * DONEP3 icones als títols
-* DONEP3 títol
+* DONEP3 capçalera
+* DONEP2 mostrar data d'inici i final del període (a part del número de dies a comptar)
+* DONEP3 transicions
+* DONEP3 collapsibles amb borders

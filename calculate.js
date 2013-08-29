@@ -44,7 +44,7 @@ $(document).ready(function() {
         var yyyy = today.getFullYear();
         indexPrimerDiaSetmana = today.getDay();
         var diesDeLaSetmana = ["dg.", "dl.", "dt.", "dc.", "dj.", "dv.", "ds."];
-        $("#start-date").html(diesDeLaSetmana[d] + " " + dd+'/'+mm+'/'+yyyy);
+        $("#start-date").html(diesDeLaSetmana[d] + "&nbsp;" + dd+'/'+mm+'/'+yyyy);
         
         var lastDay = new Date(today);
         lastDay.setDate(lastDay.getDate() + diesACalcular);
@@ -52,7 +52,7 @@ $(document).ready(function() {
         var dd = lastDay.getDate();
         var mm = lastDay.getMonth()+1; //January is 0!
         var yyyy = lastDay.getFullYear();
-        $("#end-date").html(diesDeLaSetmana[d] + " " + dd+'/'+mm+'/'+yyyy);
+        $("#end-date").html(diesDeLaSetmana[d] + "&nbsp;" + dd+'/'+mm+'/'+yyyy);
     }
         
     // Flag on guardarem la targeta més econòmica i el preu
