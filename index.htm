@@ -18,6 +18,7 @@
             <h1>T-Estalvia</h1>
             <p>T-Estalvia us ajuda a calcular quina és la targeta de TMB que s'adequa més als vostres hàbits.</p>
             <fieldset data-role="controlgroup">
+                <hr/>
                 <h3><i class="icon-qrcode"></i> Zones</h3>
                 <div class="ui-grid-a contains-select">
                     <div class="ui-block-a">
@@ -34,25 +35,7 @@
                         </select>
                     </div>
                 </div>
-                <h3><i class="icon-calendar"></i> Període</h3>
-                <p>Indiqueu en quin període s'han de fer els càlculs. Períodes de menys de 90 dies penalitzen les targetes de més durada com la T-Trimestre, la T-Jove o la T-Mes.</p>
-                <!--<div class="ui-grid-a">
-                    <div class="ui-block-a">
-                        <input id="dia-inici" type="date" value="90" min="0" size="2"/>
-                    </div>
-                    <div class="ui-block-b">
-                        <input id="dia-final" type="date" value="90" min="0" size="2"/>
-                    </div>
-                </div>-->
-                <div class="ui-grid-a">
-                    <div class="ui-block-a">
-                        <label for="dies-a-calcular">Dies a calcular:</label>
-                    </div>
-                    <div class="ui-block-b block-b-number">
-                        <input id="dies-a-calcular" type="number" value="90" min="0" size="2"/>
-                    </div>
-                </div>
-                <small><p>Es calcularà del <strong id="start-date"></strong> (avui) fins el <strong id="end-date"></strong>.</small>
+                <hr/>
                 <h3><i class="icon-exchange"></i> Viatges</h3>
                 <p>Indiqueu quants viatges acostumeu a fer cada dia de la setmana:</p>
                 <div class="ui-grid-a">
@@ -111,6 +94,26 @@
                         <input id="viatges-diumenge" type="number" value="0" min="0" size="2"/>
                     </div>
                 </div>
+                <hr/>
+                <h3><i class="icon-calendar"></i> Període</h3>
+                <p>Indiqueu en quin període s'han de fer els càlculs. Períodes de menys de 90 dies penalitzen les targetes de més durada com la T-Trimestre, la T-Jove o la T-Mes.</p>
+                <!--<div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        <input id="dia-inici" type="date" value="90" min="0" size="2"/>
+                    </div>
+                    <div class="ui-block-b">
+                        <input id="dia-final" type="date" value="90" min="0" size="2"/>
+                    </div>
+                </div>-->
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        <label for="dies-a-calcular">Dies a calcular:</label>
+                    </div>
+                    <div class="ui-block-b block-b-number">
+                        <input id="dies-a-calcular" type="number" value="90" min="0" size="2"/>
+                    </div>
+                </div>
+                <small><p>Es calcularà del <strong id="start-date"></strong> (avui) fins el <strong id="end-date"></strong>.</small>
             </fieldset>
             <div data-role="collapsible-set">
                 <div data-role="collapsible" data-collapsed="true" data-content-theme="d">
@@ -457,6 +460,7 @@
                     </div>
                 </div>
             </div>
+            <hr/>
             <h3><i class="icon-bar-chart"></i> Estadístiques</h3>
             <p><strong id="viatges-totals-setmana">0</strong> viatges/setmana</p>
             <p><strong id="viatges-totals">0</strong> viatges/període</p>

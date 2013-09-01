@@ -34,6 +34,19 @@ h3 {
 h3:first-child {
     margin-top: 0;
 }
+
+hr {
+    box-shadow: 0 0 2px 1px #aaa;
+    border: 0;
+    height: 0;
+    margin: 1em 0 -1em;
+}
+hr::after {
+    content: "\00a0";
+}
+hr:first-child {
+    margin-top: 0;
+}
 #form,
 #results {
     margin: 0 auto;

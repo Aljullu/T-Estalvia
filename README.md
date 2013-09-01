@@ -6,6 +6,7 @@ Calculadora de preus els bitllets de TMB
 
 TODO
 ==========
+
 * TODOP2 diàlegs d'informació
 * TODOP2 s'hauria de poder seleccionar la data d'inici i final
 * TODOP2 targeta rosa
