@@ -148,11 +148,11 @@ $(document).ready(function() {
             
             switch (zones) {
                 case 1:
-                    preus["bitllet-senzill"] = 2.00;
-                    preus["t10"] = 9.80;
-                    preus["tdia"] = 7.25;
-                    preus["t5030"] = 39.20;
-                    preus["t7030"] = 54.90;
+                    preus["bitllet-senzill"] = 2.15;
+                    preus["t10"] = 10.30;
+                    preus["tdia"] = 7.60;
+                    preus["t5030"] = 42.50;
+                    preus["t7030"] = 59.50;
                     preus["tmes"] = 52.75;
                     preus["ttrimestre"] = 142.00;
                     if (jove || nen) preus["tjove"] = 105.00;
@@ -167,7 +167,7 @@ $(document).ready(function() {
                     var aturat = $("#aturat").is(':checked');
                     
                     if (aturat && zones === 1) {
-                        preus["ttrimestre"] = 29.40;
+                        preus["ttrimestre"] = 30.90;
                         $("#explicacioaturat").show();
                     }
                     else {
@@ -175,11 +175,11 @@ $(document).ready(function() {
                     }
                     break;
                 case 2:
-                    preus["bitllet-senzill"] = 2.80;
-                    preus["t10"] = 19.40;
-                    preus["tdia"] = 11.50;
-                    preus["t5030"] = 65.50;
-                    preus["t7030"] = 79.40;
+                    preus["bitllet-senzill"] = 3.00;
+                    preus["t10"] = 20.30;
+                    preus["tdia"] = 12.00;
+                    preus["t5030"] = 71.00;
+                    preus["t7030"] = 86.05;
                     preus["tmes"] = 77.45;
                     preus["ttrimestre"] = 211.00;
                     if (jove || nen) preus["tjove"] = 155.00;
@@ -192,11 +192,11 @@ $(document).ready(function() {
                     
                     break;
                 case 3:
-                    preus["bitllet-senzill"] = 3.75;
-                    preus["t10"] = 26.40;
-                    preus["tdia"] = 14.50;
-                    preus["t5030"] = 91.90;
-                    preus["t7030"] = 109.00;
+                    preus["bitllet-senzill"] = 4.00;
+                    preus["t10"] = 27.70;
+                    preus["tdia"] = 15.25;
+                    preus["t5030"] = 99.60;
+                    preus["t7030"] = 118.00;
                     preus["tmes"] = 105.00;
                     preus["ttrimestre"] = 290.00;
                     if (jove || nen) preus["tjove"] = 210.00;
@@ -209,11 +209,11 @@ $(document).ready(function() {
                     
                     break;
                 case 4:
-                    preus["bitllet-senzill"] = 4.75;
-                    preus["t10"] = 33.95;
-                    preus["tdia"] = 13.35;
-                    preus["t5030"] = 114.50;
-                    preus["t7030"] = 133.50;
+                    preus["bitllet-senzill"] = 5.10;
+                    preus["t10"] = 35.65;
+                    preus["tdia"] = 17.15;
+                    preus["t5030"] = 122.00;
+                    preus["t7030"] = 144.50;
                     preus["tmes"] = 124.50;
                     preus["ttrimestre"] = 342.50;
                     if (jove || nen) preus["tjove"] = 249.00;
@@ -226,11 +226,11 @@ $(document).ready(function() {
                     
                     break;
                 case 5:
-                    preus["bitllet-senzill"] = 6.05;
-                    preus["t10"] = 39.00;
-                    preus["tdia"] = 18.40;
-                    preus["t5030"] = 135.00;
-                    preus["t7030"] = 153.00;
+                    preus["bitllet-senzill"] = 6.50;
+                    preus["t10"] = 40.95;
+                    preus["tdia"] = 19.30;
+                    preus["t5030"] = 140.00;
+                    preus["t7030"] = 165.50;
                     preus["tmes"] = 143.00;
                     preus["ttrimestre"] = 390.00;
                     if (jove || nen) preus["tjove"] = 285.50;
@@ -243,11 +243,11 @@ $(document).ready(function() {
                     
                     break;
                 case 6:
-                    preus["bitllet-senzill"] = 7.10;
-                    preus["t10"] = 41.50;
-                    preus["tdia"] = 20.65;
-                    preus["t5030"] = 150.00;
-                    preus["t7030"] = 165.50;
+                    preus["bitllet-senzill"] = 7.60;
+                    preus["t10"] = 43.55;
+                    preus["tdia"] = 21.70;
+                    preus["t5030"] = 160.00;
+                    preus["t7030"] = 179.50;
                     preus["tmes"] = 153.00;
                     preus["ttrimestre"] = 406.00;
                     if (jove || nen) preus["tjove"] = 305.50;
